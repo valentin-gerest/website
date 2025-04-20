@@ -1,20 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 33.867 33.867">
-    <path d="M0 17V0h34v34H0Zm30.26 11.39v-1.87H7.48V3.74H3.74v26.52h26.52ZM22.667 17v-5.667h-3.74v7.594h-3.854V7.48H26.52V22.667h3.74V3.74H11.333v18.927h11.334Z" />
+<svg width="128" height="128" viewBox="0 0 33.867 33.867" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.887.842A16.161 16.161 0 0 0 .725 17.003a16.161 16.161 0 0 0 16.162 16.162 16.161 16.161 0 0 0 16.161-16.162A16.161 16.161 0 0 0 16.887.843zm8.366 11.17-8.326 14.513L8.52 12.057l5.261-.014 3.32 5.713 3.288-5.732z"/>
     <style>
-        path {
-            fill: #333;
-            stroke-width: 0;
-        }
-        svg {
-            background-color: #fff;
-        }
+        path { fill: #333; }
         @media (prefers-color-scheme: dark) {
-            path {
-                fill: #fff;
-            }
-            svg {
-                background-color: #333;
-            }
+            path { fill: #fff; }
         }
     </style>
 </svg>
