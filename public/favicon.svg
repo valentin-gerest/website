@@ -2,7 +2,7 @@
     <path d="M0 17V0h34v34H0Zm30.26 11.39v-1.87H7.48V3.74H3.74v26.52h26.52ZM22.667 17v-5.667h-3.74v7.594h-3.854V7.48H26.52V22.667h3.74V3.74H11.333v18.927h11.334Z" />
     <style>
         path {
-            fill: #000;
+            fill: #333;
             stroke-width: 0;
         }
         svg {
@@ -13,7 +13,7 @@
                 fill: #fff;
             }
             svg {
-                background-color: #000;
+                background-color: #333;
             }
         }
     </style>
