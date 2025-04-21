@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+a:hover {
+    text-decoration: underline;
+}

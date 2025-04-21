@@ -1,5 +1,6 @@
 ---
 import Logo from "../../public/favicon.svg";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -17,6 +18,14 @@ import Logo from "../../public/favicon.svg";
 				<a href="/">
 					<Logo  height={40} width={40} />
 				</a>
+				<ul class="flex items-center gap-4">
+					<li>
+						<a href="/">Accueil</a>
+					</li>
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 		<slot />
