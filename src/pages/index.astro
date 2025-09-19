@@ -1,56 +1,105 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import Layout from "../layouts/Layout.astro";
+const experiences = [
+  {
+    title: "Galadrim - Tech Lead branche IA",
+    date: "juillet 2024 - mai 2025",
+    description:
+      "En tant que tech lead, j’ai architecturé des solutions applicatives intégrant des technologies d’intelligence artificielle et mentoré nos développeurs dans leur mise en œuvre. ",
+    years: "2024-2025",
+  },
+  {
+    title: "Galadrim - Développeur full-stack",
+    date: "janvier 2020 - juillet 2024",
+    description:
+      "Développeur fullstack, j’ai conçu, déployé et maintenu de nombreux projets en autonomie. J’ai également contribué à des applications complexes sur plusieurs années, au sein d’équipes conséquentes. En contact direct avec les clients, j’ai géré leurs besoins, proposé des solutions et assuré le suivi, un rôle très proche de celui d’un freelance.",
+    years: "2020-2024",
+  },
+  {
+    title: "Stage recherche Tokyo NII",
+    date: "mars 2019 - septembre 2019",
+    description: "",
+    years: "2019-2020",
+  },
+  {
+    title: "ENSEEIHT",
+    date: "2016 - 2019",
+    description: "",
+    years: "2016-2019",
+  },
+  {
+    title: "Prépa MP Champollion Grenoble",
+    date: "2014 - 2016",
+    description: "",
+    years: "2014-2016",
+  },
+];
 ---
 
 <Layout>
-	<main class="max-w-3xl w-full mx-auto px-3 flex-grow pb-16">
-		<section class="pt-20">
-			<p class="text-xl">Hello, je m'appelle</p>
-			<h1 class="text-6xl py-6 font-bold ">Valentin GEREST</h1>
-			<h2 class="text-5xl ">Je suis <span class="font-medium">développeur full stack</span></h2>
-		</section>
+  <main class="max-w-5xl w-full mx-auto px-3 pb-20">
+    <section
+      class="pt-4 sm:pt-20 flex-col-reverse lg:flex-row flex items-center justify-center lg:justify-between flex-wrap gap-10"
+    >
+      <div class="flex flex-col justify-center text-center lg:text-left">
+        <p class="text-2xl sm:text-4xl">Bonjour, je m'appelle</p>
+        <h1 class="text-3xl sm:text-8xl py-3 sm:py-6 font-bold">
+          Valentin <br /> GEREST
+        </h1>
+        <p class="text-xl sm:text-3xl">Je suis développeur fullstack</p>
+        <p class="text-neutral-600 pt-4 dark:text-neutral-300">
+          React, Typescript, Node.js, Next.js
+        </p>
+        <div class="pt-8 flex items-center gap-4 flex-col lg:flex-row">
+          <button
+            class="cursor-pointer border px-6 py-4 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          >
+            Télécharger mon CV
+          </button>
+          <div class="flex flex-row gap-2 pl-0 lg:pl-5">
+            <a
+              href="https://www.linkedin.com/in/valentin-gerest/"
+              target="_blank"
+              class="border px-2 py-2 rounded-full inline-block"
+            >
+              <LinkedInIcon class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <img
+          src="profile_picture.webp"
+          alt="Photo de Valentin GEREST"
+          class="rounded-full border-4 border-white dark:border-none shadow-lg w-60 sm:w-100 aspect-square bg-[#e4e4e4] text-transparent animate-fade-in ease-out-expo"
+        />
+      </div>
+    </section>
 
-		<section class="py-15">
-			<p class="max-w-2xl">
-				J'ai plus de <b>5 ans d'expérience</b> professionnelle dans le développement web, en particulier avec <b>Typescript</b>, <b>node.js</b> et <b>React</b>, mais j'ai également de l'expérience avec d'autres technologies telles que <b>Python</b>, le <b>devops</b> (AWS, GCP et Azure), la <b>CI/CD</b> sur Github, Azure DevOps, etc.
-			</p>
-		</section>
-		
-		<section class="border-l-2 border-dashed p-4 relative flex flex-col gap-6">
-			<article class="relative before:content-[''] before:absolute before:left-[-23px] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-red-400">
-				<p class="font-medium"><a href="https://www.galadrim.fr/" target="_blank">Galadrim</a> - Tech Lead branche IA</p>
-				<p class="text-sm">juillet 2024 - mai 2025</p>
-			</article>
-
-			<article class="relative before:content-[''] before:absolute before:left-[-23px] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-red-400">
-				<p class="font-medium"><a href="https://www.galadrim.fr/" target="_blank">Galadrim</a> - Développeur full stack</p>
-				<p class="text-sm">janvier 2020 - juillet 2024</p>
-			</article>
-
-			<article class="relative before:content-[''] before:absolute before:left-[-23px] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-red-400">
-				<p class="font-medium">Stage recherche Tokyo NII</p>
-				<p class="text-sm"> mars 2019 - septembre 2019</p>
-			</article>
-
-			<article class="relative before:content-[''] before:absolute before:left-[-23px] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-red-400">
-				<p class="font-medium">ENSEEIHT - Info math appliquées</p>
-				<p class="text-sm">2016 - 2019</p>
-			</article>
-
-			<article class="relative before:content-[''] before:absolute before:left-[-23px] before:top-2 before:w-3 before:h-3 before:rounded-full before:bg-red-400">
-				<p class="font-medium">Prépa MP Champollion Grenoble</p>
-				<p class="text-sm">2014 - 2016</p>
-			</article>
-		</section>
-
-		<section class="flex flex-col gap-6 pt-12">
-			<h2 class="text-4xl font-bold">Mes compétences</h2>
-			<div class="flex flex-col gap-4">
-				<div class="flex flex-col gap-2">
-					<h3 class="text-2xl font-bold">Technologies</h3>
-					<p class="text-sm">Typescript, Node.js, React, Python, AWS, GCP, Azure, CI/CD, etc.</p>
-				</div>
-			</div>
-		</section>
-	</main>
+    <section class="mt-18 sm:mt-30 pl-4 sm:pr-4">
+      <h2 class="text-2xl sm:text-4xl font-bold">Mes expériences</h2>
+      <div
+        class="flex flex-col gap-12 mt-8 sm:mt-16 py-6 sm:py-20 sm:px-3 border-l-2 border-neutral-300 dark:border-neutral-600 max-w-4xl mx-auto"
+      >
+        {
+          experiences.map((experience) => (
+            <article class="relative sm:px-3 pl-6 py-2 flex">
+              <div class="absolute left-[-13px] sm:left-[-30px] top-[12px] sm:w-8 sm:h-8 w-6 h-6 bg-white dark:bg-neutral-800 dark:border-white rounded-full border-8" />
+              <p class="w-full text-4xl text-neutral-400 hidden sm:block">
+                {experience.years}
+              </p>
+              <div class="w-full">
+                <h3 class="font-bold text-lg">{experience.title}</h3>
+                <p class="text-neutral-600 dark:text-neutral-300">
+                  {experience.date}
+                </p>
+                <p class="sm:text-justify mt-3">{experience.description}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
 </Layout>

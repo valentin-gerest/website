@@ -5,30 +5,30 @@ import "../styles/global.css";
 
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Valentin GEREST - développeur full stack</title>
-	</head>
-	<body class="dark:text-white dark:bg-[#222] min-h-screen flex flex-col">
-		<nav class="border-t-12 border-[#222] dark:border-white px-3">
-			<div class="max-w-3xl mx-auto flex items-center justify-between py-4">
-				<a href="/">
-					<Logo  height={40} width={40} />
-				</a>
-				<ul class="flex items-center gap-4">
-					<li>
-						<a href="/">Accueil</a>
-					</li>
-					<li>
-						<a href="/contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<slot />
-		<footer class="border-b-12 border-[#222] dark:border-white px-3"></footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Valentin GEREST - développeur full stack</title>
+  </head>
+
+  <body
+    class="flex dark:text-white dark:bg-neutral-900 min-h-screen flex-col font-mono"
+  >
+    <nav class="py-4 sm:py-10 px-4 sm:px-3">
+      <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <a href="/">
+          <Logo height={40} width={40} />
+        </a>
+        <ul class="flex items-center gap-4">
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <slot />
+    <footer class="px-3"></footer>
+  </body>
 </html>
