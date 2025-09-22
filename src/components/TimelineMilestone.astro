@@ -1,0 +1,19 @@
+---
+interface Props {
+  color: "neutral" | "green";
+}
+
+const { color = "neutral" } = Astro.props;
+const colors = {
+  neutral: "bg-white dark:bg-neutral-800 dark:border-white",
+  green: "border-green-600 bg-white dark:bg-neutral-800 dark:border-green-600",
+};
+---
+
+<div
+  class:list={[
+    "absolute left-[-13px] sm:left-[-30px] top-[9px] sm:top-[12px] sm:w-8 sm:h-8 w-6 h-6 rounded-full border-8",
+    colors[color],
+  ]}
+>
+</div>

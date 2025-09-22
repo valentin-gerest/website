@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-a:hover {
-  text-decoration: underline;
-}
-
 @theme {
   --animate-fade-in: fade-in 0.5s;
   --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);

@@ -1,0 +1,28 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"button"> {
+  size?: "sm" | "md" | "lg";
+  href?: string;
+}
+
+const sizes = {
+  sm: "px-2 py-2",
+  md: "px-4 py-2",
+  lg: "px-6 py-4",
+};
+
+const { size = "md", ...props } = Astro.props;
+const Component = props.href ? "a" : "button";
+---
+
+<Component
+  {...props}
+  class:list={[
+    "cursor-pointer inline-block border rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 active:bg-neutral-200 dark:active:bg-neutral-800",
+    sizes[size],
+    props.class,
+  ]}
+>
+  <slot />
+</Component>
