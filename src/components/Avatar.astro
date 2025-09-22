@@ -1,0 +1,25 @@
+---
+import { type HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"img"> {
+  size?: "md" | "lg";
+}
+
+const { size = "md", class: className, ...props } = Astro.props;
+
+const sizes = {
+  md: "w-16 border-2 border-white",
+  lg: "w-60 border-4 border-white",
+};
+---
+
+<img
+  src="/profile_picture.webp"
+  alt="Photo de Valentin GEREST"
+  class:list={[
+    sizes[size],
+    "rounded-full  dark:border-none shadow-lg aspect-square bg-[#e4e4e4] text-transparent animate-fade-in ease-out-expo",
+    className,
+  ]}
+  {...props}
+/>

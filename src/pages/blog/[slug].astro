@@ -1,0 +1,51 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Avatar from "../../components/Avatar.astro";
+import Layout from "../../layouts/Layout.astro";
+import { formatDate } from "../../utils/formatDate";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout>
+  <Fragment slot="head">
+    <title>{post.data.title} - Valentin GEREST - Blog</title>
+    <meta name="og:title" content={post.data.title} />
+    <meta name="og:description" content={post.data.description} />
+    <meta property="og:image" content={post.data.image} />
+  </Fragment>
+
+  <main class="max-w-3xl w-full mx-auto px-3 pb-20 flex flex-col">
+    <section class="flex items-center gap-4 mb-10">
+      <Avatar size="md" />
+      <div>
+        <p class="text-lg font-bold">
+          <a href="/">Valentin GEREST</a>
+        </p>
+        <p>
+          Publié le {formatDate(post.data.created)}{
+            post.data.updated && post.data.updated !== post.data.created
+              ? ` - ${formatDate(post.data.updated)}`
+              : ""
+          }
+        </p>
+      </div>
+    </section>
+
+    <section class="block prose max-w-full dark:prose-invert font-sans">
+      <img src={post.data.image} alt="illustration" />
+      <h1>{post.data.title}</h1>
+      <Content />
+    </section>
+  </main>
+</Layout>

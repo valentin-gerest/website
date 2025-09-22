@@ -9,8 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.4",
     "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.18"
   }
 }

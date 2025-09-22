@@ -10,7 +10,7 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Valentin GEREST - développeur full stack</title>
+    <slot name="head" />
   </head>
 
   <body
@@ -23,7 +23,7 @@ import "../styles/global.css";
         </a>
         <ul class="flex items-center gap-4">
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/blog">Blog</a>
           </li>
         </ul>
       </div>
