@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  author?: string;
+}
+
+const { title, description, image, author } = Astro.props;
+---
+
+<>
+  <title>{title}</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  {image && <meta name="twitter:image" content={image} />}
+  <meta name="og:title" content={title} />
+  <meta name="og:description" content={description} />
+  {image && <meta property="og:image" content={image} />}
+  {author && <meta name="author" content={author} />}
+</>

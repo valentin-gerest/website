@@ -3,13 +3,17 @@ import AvailableDot from "../components/AvailableDot.astro";
 import Avatar from "../components/Avatar.astro";
 import Button from "../components/Button.astro";
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import PageMeta from "../components/PageMeta.astro";
 import TimelineMilestone from "../components/TimelineMilestone.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <Fragment slot="head">
-    <title>Valentin GEREST - développeur full stack</title>
+    <PageMeta
+      title="Valentin GEREST - développeur full stack"
+      description="Valentin GEREST - développeur full stack"
+    />
   </Fragment>
 
   <main class="max-w-5xl w-full mx-auto px-3 pb-20">
