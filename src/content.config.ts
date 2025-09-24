@@ -10,6 +10,7 @@ export const collections = {
       description: z.string().optional(),
       created: z.string(),
       updated: z.string().optional(),
+      draft: z.boolean().optional(),
     }),
   }),
 };

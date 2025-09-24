@@ -5,6 +5,9 @@ import Layout from "../../layouts/Layout.astro";
 import { formatDate } from "../../utils/formatDate";
 
 const posts = await getCollection("blog");
+const publishedPosts = posts.filter(
+  (post) => !post.data.draft || import.meta.env.DEV
+);
 ---
 
 <Layout>
@@ -19,7 +22,7 @@ const posts = await getCollection("blog");
     <h1 class="text-2xl font-bold mb-4">Blog</h1>
     <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
       {
-        posts.map((post) => (
+        publishedPosts.map((post) => (
           <a href={`/blog/${post.id}`}>
             <article class="flex flex-col gap-2 border p-4 rounded-lg">
               <img src={post.data.image} alt="illustration" class="w-full" />
@@ -34,6 +37,7 @@ const posts = await getCollection("blog");
           </a>
         ))
       }
+      {publishedPosts.length === 0 && <p>Aucun article publié</p>}
     </section>
   </main>
 </Layout>
