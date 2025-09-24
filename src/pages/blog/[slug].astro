@@ -29,8 +29,8 @@ const { Content } = await render(post);
     />
   </Fragment>
 
-  <main class="max-w-3xl w-full mx-auto px-3 pb-20 flex flex-col">
-    <section class="flex items-center gap-4 mb-10">
+  <main class="mx-auto flex w-full max-w-3xl flex-col px-3 pb-20">
+    <section class="mb-10 flex items-center gap-4">
       <Avatar size="md" />
       <div>
         <p class="text-lg font-bold">
@@ -46,7 +46,7 @@ const { Content } = await render(post);
       </div>
     </section>
 
-    <section class="block prose max-w-full dark:prose-invert font-sans">
+    <section class="prose dark:prose-invert block max-w-full font-sans">
       <img src={post.data.image} alt="illustration" />
       <h1>{post.data.title}</h1>
       <Content />

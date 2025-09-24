@@ -16,34 +16,34 @@ import Layout from "../layouts/Layout.astro";
     />
   </Fragment>
 
-  <main class="max-w-5xl w-full mx-auto px-3 pb-20">
+  <main class="mx-auto w-full max-w-5xl px-3 pb-20">
     <section
-      class="pt-4 sm:pt-20 flex-col-reverse lg:flex-row flex items-center justify-center lg:justify-between flex-wrap gap-10"
+      class="flex flex-col-reverse flex-wrap items-center justify-center gap-10 pt-4 sm:pt-20 lg:flex-row lg:justify-between"
     >
       <div class="flex flex-col justify-center text-center lg:text-left">
         <p class="text-2xl sm:text-4xl">Bonjour, je m'appelle</p>
-        <h1 class="text-3xl sm:text-8xl py-3 sm:py-6 font-bold">
+        <h1 class="py-3 text-3xl font-bold sm:py-6 sm:text-8xl">
           Valentin <br /> GEREST
         </h1>
-        <p class="text-xl sm:text-3xl mt-3 sm:mt-0">
+        <p class="mt-3 text-xl sm:mt-0 sm:text-3xl">
           Je suis développeur full-stack
         </p>
-        <p class="text-neutral-600 pt-4 dark:text-neutral-300">
+        <p class="pt-4 text-neutral-600 dark:text-neutral-300">
           React, Typescript, Node.js, Next.js
         </p>
-        <div class="pt-8 flex items-center gap-4 flex-col lg:flex-row">
+        <div class="flex flex-col items-center gap-4 pt-8 lg:flex-row">
           <Button> Télécharger mon CV </Button>
           <div class="flex flex-row gap-2 pl-0 lg:pl-5">
             <Button
               size="sm"
               href="https://www.linkedin.com/in/valentin-gerest/"
             >
-              <LinkedInIcon class="w-4 h-4" />
+              <LinkedInIcon class="h-4 w-4" />
             </Button>
           </div>
         </div>
       </div>
-      <div class="flex justify-center items-center">
+      <div class="flex items-center justify-center">
         <!-- <img
           src="/profile_picture.webp"
           alt="Photo de Valentin GEREST"
@@ -53,23 +53,23 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="mt-10 sm:mt-22 pl-4 sm:pr-4">
+    <section class="mt-10 pl-4 sm:mt-22 sm:pr-4">
       <div
-        class="flex flex-col gap-2 mt-8 sm:mt-16 py-6 sm:py-20 sm:px-3 border-l-2 border-neutral-300 border-dashed dark:border-neutral-600 max-w-4xl mx-auto"
+        class="mx-auto mt-8 flex max-w-4xl flex-col gap-2 border-l-2 border-dashed border-neutral-300 py-6 sm:mt-16 sm:px-3 sm:py-20 dark:border-neutral-600"
       >
-        <article class="relative sm:px-3 pl-6 py-2 flex">
+        <article class="relative flex py-2 pl-6 sm:px-3">
           <TimelineMilestone color="green" />
           <p
-            class="w-full text-4xl text-neutral-400 hidden sm:block pl-0 sm:pl-4"
+            class="hidden w-full pl-0 text-4xl text-neutral-400 sm:block sm:pl-4"
           >
             now
           </p>
           <div class="w-full">
-            <h3 class="font-bold text-xl">Développeur full-stack freelance</h3>
+            <h3 class="text-xl font-bold">Développeur full-stack freelance</h3>
             <p class="text-neutral-600 dark:text-neutral-300">
               depuis juin 2025
             </p>
-            <p class="sm:text-justify mt-3">
+            <p class="mt-3 sm:text-justify">
               Disponible pour une mission
               <AvailableDot />
               <div class="mt-3">
@@ -81,19 +81,19 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </article>
 
-        <article class="relative sm:px-3 pl-6 py-2 flex mt-8">
+        <article class="relative mt-8 flex py-2 pl-6 sm:px-3">
           <TimelineMilestone color="neutral" />
           <p
-            class="w-full text-4xl text-neutral-400 hidden sm:block pl-0 sm:pl-4"
+            class="hidden w-full pl-0 text-4xl text-neutral-400 sm:block sm:pl-4"
           >
             2024-2025
           </p>
           <div class="w-full">
-            <h3 class="font-bold text-lg">Galadrim - Tech Lead branche IA</h3>
+            <h3 class="text-lg font-bold">Galadrim - Tech Lead branche IA</h3>
             <p class="text-neutral-600 dark:text-neutral-300">
               juillet 2024 - mai 2025
             </p>
-            <p class="sm:text-justify mt-3">
+            <p class="mt-3 sm:text-justify">
               En tant que tech lead, j’ai architecturé des solutions
               applicatives intégrant des technologies d’intelligence
               artificielle et mentoré nos développeurs dans leur mise en œuvre.
@@ -101,19 +101,19 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </article>
 
-        <article class="relative sm:px-3 pl-6 py-2 flex mt-8">
+        <article class="relative mt-8 flex py-2 pl-6 sm:px-3">
           <TimelineMilestone color="neutral" />
           <p
-            class="w-full text-4xl text-neutral-400 hidden sm:block pl-0 sm:pl-4"
+            class="hidden w-full pl-0 text-4xl text-neutral-400 sm:block sm:pl-4"
           >
             2020-2024
           </p>
           <div class="w-full">
-            <h3 class="font-bold text-lg">Galadrim - Développeur full-stack</h3>
+            <h3 class="text-lg font-bold">Galadrim - Développeur full-stack</h3>
             <p class="text-neutral-600 dark:text-neutral-300">
               janvier 2020 - juillet 2024
             </p>
-            <p class="sm:text-justify mt-3">
+            <p class="mt-3 sm:text-justify">
               Développeur fullstack, j’ai conçu, déployé et maintenu de nombreux
               projets en autonomie. J’ai également contribué à des applications
               complexes sur plusieurs années, au sein d’équipes conséquentes. En
@@ -124,43 +124,43 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </article>
 
-        <article class="relative sm:px-3 pl-6 py-2 flex mt-8">
+        <article class="relative mt-8 flex py-2 pl-6 sm:px-3">
           <TimelineMilestone color="neutral" />
           <p
-            class="w-full text-2xl text-neutral-400 hidden sm:block pl-0 sm:pl-4"
+            class="hidden w-full pl-0 text-2xl text-neutral-400 sm:block sm:pl-4"
           >
             2019
           </p>
           <div class="w-full">
-            <h3 class="font-bold text-lg">Stage recherche Tokyo NII</h3>
+            <h3 class="text-lg font-bold">Stage recherche Tokyo NII</h3>
             <p class="text-neutral-600 dark:text-neutral-300">
               mars 2019 - septembre 2019
             </p>
           </div>
         </article>
 
-        <article class="relative sm:px-3 pl-6 py-2 flex">
+        <article class="relative flex py-2 pl-6 sm:px-3">
           <TimelineMilestone color="neutral" />
           <p
-            class="w-full text-2xl text-neutral-400 hidden sm:block pl-0 sm:pl-4"
+            class="hidden w-full pl-0 text-2xl text-neutral-400 sm:block sm:pl-4"
           >
             2016-2019
           </p>
           <div class="w-full">
-            <h3 class="font-bold text-lg">ENSEEIHT - école d'ingénieur</h3>
+            <h3 class="text-lg font-bold">ENSEEIHT - école d'ingénieur</h3>
             <p class="text-neutral-600 dark:text-neutral-300">2016 - 2019</p>
           </div>
         </article>
 
-        <article class="relative sm:px-3 pl-6 py-2 flex">
+        <article class="relative flex py-2 pl-6 sm:px-3">
           <TimelineMilestone color="neutral" />
           <p
-            class="w-full text-2xl text-neutral-400 hidden sm:block pl-0 sm:pl-4"
+            class="hidden w-full pl-0 text-2xl text-neutral-400 sm:block sm:pl-4"
           >
             2014-2016
           </p>
           <div class="w-full">
-            <h3 class="font-bold text-lg">Prépa MP Champollion Grenoble</h3>
+            <h3 class="text-lg font-bold">Prépa MP Champollion Grenoble</h3>
             <p class="text-neutral-600 dark:text-neutral-300">2014 - 2016</p>
           </div>
         </article>
